@@ -8,3 +8,4 @@ Chrome Extension + Node.js backend AI trading system.
 cd backend
 npm install
 npm start# Ai-Signal-System-First-One
+# super-fortnight
