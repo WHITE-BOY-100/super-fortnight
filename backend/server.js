@@ -4,23 +4,31 @@ require("dotenv").config();
 
 const analyzeRoute = require("./routes/analyze");
 
-console.log("GROQ =", process.env.GROQ_API_KEY);
-
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Health check route
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
+// ✅ Root route
+app.get("/", (req, res) => {
+  res.json({
+    status: "AI Signal Backend Running"
+  });
 });
 
-// Analyze route
+// ✅ Health check route
+app.get("/health", (req, res) => {
+  res.json({
+    status: "ok"
+  });
+});
+
+// API routes
 app.use("/analyze", analyzeRoute);
 
-const PORT = process.env.PORT || 5000;
+// Port
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log("Server running on port " + PORT);
+  console.log("🚀 Server running on " + PORT);
 });
