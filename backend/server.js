@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 });
 
 // HEALTH route (THIS IS IMPORTANT)
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
+app.get("/test-route-123", (req, res) => {
+  res.json({ ok: "it works" });
 });
 
 // test route
