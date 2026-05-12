@@ -7,4 +7,4 @@ Chrome Extension + Node.js backend AI trading system.
 ```bash
 cd backend
 npm install
-npm start
+npm start# Ai-Signal-System-First-One
